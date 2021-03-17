@@ -1,0 +1,58 @@
+   <!DOCTYPE html>
+   <html>
+    
+<head>
+    <title>
+        Intern CRUD Michelle Loke
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form action='#' id="myForm" method='post' name="myForm" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label><b>Full Name*</b></label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" onblur="validate('name'.this.value)">
+                    </div>
+                    <div>
+                        <label><b>EMP Code</b></label>
+                        <input type="text" name="empCode" id="empCode" onblur="validate('email',this.value)">
+                    </div>
+                    <div>
+                        <label><b>Job</b></label>
+                        <input type="text" name="job" id="job" onblur="validate('job',this.value)">
+                    </div>
+                    <div>
+                        <label><b>City</b></label>
+                        <input type="text" name="city" id="city" onblur="validate('city',this.value)">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP Code</th>
+                            <th>Job</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
